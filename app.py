@@ -2,9 +2,15 @@ import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
 
+import sys
+from pathlib import Path
+
+sys.path.append(str(Path(__file__).parent / "src"))
+
 from fetch_data import ts_data
 from seasonality import detect_seasonality
 from decomposition import ClassicalDecomposition
+
 
 st.title("📈 Time Series Explorer")
 
